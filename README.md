@@ -40,6 +40,6 @@ This is only required for devices being flashed by ESPhome for the first time, o
 
 For Mac users, you will need to install drivers for the USB serial chipset (TTGO comes in two differnt models with either ch340 vs cp2102).
 
-You will need to upload any image or fong files used in the esphome folder on the HomeAssistant (can use file editor add-on for this)
+You will need to upload any image or font files used in the esphome folder on the HomeAssistant (can use file editor add-on for this)
 Just edit the Wifi and passowrds parameters and install the YAML code to device using ESPHOME interface.
 And the device should be visible and can be added in via the integrations page in home assistant.
