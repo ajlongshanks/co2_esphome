@@ -159,8 +159,11 @@ display:
       if (id(co2data).state <1100) {
               it.image(10, 35, id(face_good));
       }
+      else if (id(co2data).state <1500) {
+              it.image(10, 35, id(face_moderate)); 
+      }
       else {
-        it.image(10, 35, id(face_moderate));
+        it.image(10, 35, id(face_poor));
       }
 
       
