@@ -111,6 +111,15 @@ image:
     id: my_image
     resize: 90x90
     type: RGB24
+    - file: "moderate.png"
+    id: face_moderate
+    resize: 90x90
+    type: RGB24
+  - file: "poor.png"
+    id: face_poor
+    resize: 90x90
+    type: RGB24
+
 
 time:
   - platform: homeassistant
@@ -146,8 +155,14 @@ display:
       it.print(130, 112, id(helvetica_12), id(my_yellow), TextAlign::TOP_LEFT, "Temp");
       it.print(194, 112, id(helvetica_12), id(my_blue), TextAlign::TOP_LEFT, "RH");
       
-      // Image display (so far its static, but you can write if conditions to display differnt images based on co2data readings)
-      it.image(10, 35, id(my_image));
+      // Image display (so far just 2 faces)
+      if (id(co2data).state <1100) {
+              it.image(10, 35, id(face_good));
+      }
+      else {
+        it.image(10, 35, id(face_moderate));
+      }
+
       
       //Condional Text Display
       if (id(system_status).state) {
