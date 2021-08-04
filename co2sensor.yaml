@@ -155,7 +155,7 @@ display:
       it.print(130, 112, id(helvetica_12), id(my_yellow), TextAlign::TOP_LEFT, "Temp");
       it.print(194, 112, id(helvetica_12), id(my_blue), TextAlign::TOP_LEFT, "RH");
       
-      // Image display (so far just 2 faces)
+      // Image display (Three Faces Set at co2 Thresholds <1100ppm, <1500pm )
       if (id(co2data).state <1100) {
               it.image(10, 35, id(face_good));
       }
